@@ -10,3 +10,8 @@
     apt: 
      name: tree
      state: present
+  - name: I want to install git on Ubuntu
+    apt:
+       name: git
+       state: present
+       
