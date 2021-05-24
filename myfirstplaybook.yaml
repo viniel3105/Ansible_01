@@ -5,8 +5,8 @@
   - name: I want install webservers on Ubuntu
     apt:
       name: apache2
-      state: Present
+      state: absent
   - name: I want to install tree on Ubuntu
     apt: 
      name: tree
-     state: Present
+     state: absent
