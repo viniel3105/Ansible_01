@@ -1,7 +1,7 @@
 ---
-hosts: all
-become: yes
-tasks:
+- hosts: all
+  become: yes
+  tasks:
 - name: install webserver on debian node only
   apt: 
     name: apache2
