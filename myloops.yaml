@@ -1,0 +1,13 @@
+---
+- hosts: 172.31.24.27
+  become: yes
+  tasks: 
+  - name: install git
+    yum: 
+      name: "{{ item }}"
+      state: present
+    loop: 
+    - git
+    - tree
+    - wget
+    
