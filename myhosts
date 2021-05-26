@@ -3,10 +3,6 @@
 172.31.35.76
 172.31.24.27
 
-[applicationservers]
-172.31.36.77
-172.31.25.28
-
 [PreProdservers]
 172.31.37.78
 172.31.26.29
@@ -20,3 +16,7 @@
 
 [redhatservers]
 172.31.24.27
+
+[mywebservers:vars]
+mywebpackageforubuntu= apache2
+mywebpackageforredhat= httpd
