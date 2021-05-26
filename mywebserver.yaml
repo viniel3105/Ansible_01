@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: ubuntuservers
   become: yes
   tasks:
   -  name: install webserver on debian node only
