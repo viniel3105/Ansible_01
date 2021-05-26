@@ -1,0 +1,14 @@
+---
+- hosts: mywget
+  become: yes
+  tasks:
+  -  name: install wget on debian node only
+     apt: 
+      name: wget
+      state: present
+     when: ansible_os_family=="Debian"
+  -  name: install wget on Redhat node only
+     yum:
+       name: wget
+       state: present
+     when: ansible_os_family=="RedHat"
