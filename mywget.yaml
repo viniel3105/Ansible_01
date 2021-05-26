@@ -4,11 +4,11 @@
   tasks:
   -  name: install wget on debian node only
      apt: 
-      name: wget
+      name: "{{mywgetpackageforubuntu}}"
       state: present
      when: ansible_os_family=="Debian"
   -  name: install wget on Redhat node only
      yum:
-       name: wget
+       name: "{{mywgetpackageforredhat}}"
        state: present
      when: ansible_os_family=="RedHat"

@@ -1,14 +1,22 @@
 ---
-- hosts: ubuntuservers
+- hosts: mywebservers
   become: yes
   tasks:
   -  name: install webserver on debian node only
      apt: 
-      name: apache2
+      name: "{{mywebpackageforubuntu}}"
       state: present
+  -  name: I want to start webserver on debian node only
+     apt: 
+      name: "{{mywebpackageforubuntu}}"
+      state: started
      when: ansible_os_family=="Debian"
   -  name: install webserver on Redhat node only
      yum:
-       name: httpd
+       name: "{{mywebpackageforredhat}}"
        state: present
      when: ansible_os_family=="RedHat"
+  -  name: I want to start webservers on redhat node only
+     apt: 
+      name: "{{mywebpackageforredhat}}"
+      state: started  
