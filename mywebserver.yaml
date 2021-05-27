@@ -1,12 +1,17 @@
 ---
-- hosts: all
+- hosts: mywebservers
   become: yes
   tasks:
   -  name: install webserver on debian node only
      apt: 
         name: "{{mywebpackageforubuntu}}"
         state: present
-        when: ansible_os_family=="Debian"
+        when: ansible_os_family =="Debian"
+  -  name: install webserver on debian node only
+     apt: 
+        name: "{{mywebpackageforubuntu}}"
+        state: started
+        when: ansible_os_family =="Debian"
 
   -  name: install webserver on Redhat node only
      yum:
@@ -14,3 +19,8 @@
        state: present
        when: ansible_os_family=="RedHat"
 
+  -  name: install webserver on Redhat node only
+     yum:
+       name: "{{mywebpackageforredhat}}"
+       state: present
+       when: ansible_os_family=="RedHat"
