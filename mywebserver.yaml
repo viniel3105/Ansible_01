@@ -22,5 +22,5 @@
   -  name: install webserver on Redhat node only
      yum:
        name: "{{mywebpackageforredhat}}"
-       state: present
+       state: started
      when: ansible_os_family=="RedHat"
