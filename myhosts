@@ -21,10 +21,6 @@
 [redhatservers]
 172.31.24.27
 
-[mywebservers:vars]
-mywebpackageforubuntu= apache2
-mywebpackageforredhat= httpd
-
 [mywget:vars]
 mywgetpackageforubuntu= wget
 mywgetpackageforredhat= wget
