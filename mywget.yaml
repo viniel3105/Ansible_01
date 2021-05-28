@@ -9,6 +9,6 @@
      when: ansible_os_family=="Debian"
   -  name: install wget on Redhat node only
      yum:
-       name: "{{mywgetpackageforredhat}}"
+       name: "{{mywgetpackageforRedHat}}"
        state: present
      when: ansible_os_family=="RedHat"
