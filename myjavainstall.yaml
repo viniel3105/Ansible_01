@@ -10,7 +10,7 @@
 
   - name: need to install Java on RedHat node only
     yum:
-     name: "{{myjavapackonRedhat}}"
+     name: "{{myjavapackonRedHat}}"
      state: present
     when: ansible_os_family == "RedHat"
 
