@@ -6,11 +6,12 @@
   yum:
     name: "{{myjavepackonredhat}}"
     state: present
-  When: ansible_os_family == "Redhat"
+  when: ansible_os_family == "Redhat"
+
 - name: need to install Java on ubuntu node only
   apt:
     name: "{{myjavapackonubuntu}}"
     state: present
-  When: ansible_os_family == "Debian"
+  when: ansible_os_family == "Debian"
 
   
