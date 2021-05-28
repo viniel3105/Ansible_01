@@ -1,0 +1,18 @@
+---
+- hosts: 172.31.36.4
+  become: yes
+  tasks:
+  - name: I want to install git on RedHat
+    yum: 
+     name: git
+     state: present
+     
+  - name: I want to install tree on RedHat
+    yum:
+     name: tree
+     state: present
+
+  - name: I want to install wget on RedHat
+    yum:
+     name: wget
+     state: present
