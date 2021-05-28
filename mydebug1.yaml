@@ -1,0 +1,17 @@
+---
+- hosts: 172.31.36.4
+  become: yes
+  tasks: 
+  - name: I want to execute Linux command
+    command: java -version
+    register: myresult
+  - name: I want to display my result
+    debug:
+     msg: "{{myresult}}"
+
+  - name: I want to check os release 
+    command: cat /etc/os-release
+    register: myresult
+  - name: I want to display my result
+    debug:
+     msg: "{{myresult}}"

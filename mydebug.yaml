@@ -1,17 +1,23 @@
 ---
-- hosts: 172.31.36.4
-  become: yes
-  tasks: 
-  - name: I want to execute Linux command
-    command: java -version
-    register: myresult
-  - name: I want to display my result
-    debug:
+ - hosts: 172.31.35.76
+   become: yes
+   tasks: 
+ - name: I want to execute linux command
+   command: hostname
+   register: myresult
+ - name: I want to display myresult
+   debug: 
      msg: "{{myresult}}"
 
-  - name: I want to check os release 
-    command: cat /etc/os-release
-    register: myresult
-  - name: I want to display my result
-    debug:
-     msg: "{{myresult}}"
+ - name: I want to install git
+   apt:
+     name: git
+     state: present
+   when: myresult.stderr = ""
+
+ - name: I want to install tree
+   apt: 
+     name: tree
+     state: present
+   when: myresult.stderr != ""
+
