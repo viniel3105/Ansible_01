@@ -8,10 +8,10 @@
      state: present
     when: ansible_os_family == "Debian"
 
-  - name: need to install Java on Redhat node only
+  - name: need to install Java on RedHat node only
     yum:
-     name: "{{myjavepackonredhat}}"
-     state: present
+     name: "{{myjavepackonRedhat}}"
+     state: started
     when: ansible_os_family == "RedHat"
 
   
