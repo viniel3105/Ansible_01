@@ -13,9 +13,9 @@
         state: present
      when: ansible_os_family =="Debian"
 
-  -  name: install webserver on Redhat node only
+  -  name: install webserver on RedHat node only
      yum:
-       name: "{{mywebpackageforredhat}}"
+       name: "{{mywebpackageforRedHat}}"
        state: present
      when: ansible_os_family=="RedHat"
 

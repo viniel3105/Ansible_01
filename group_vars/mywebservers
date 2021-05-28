@@ -1,9 +1,9 @@
 
 mywebpackageforubuntu: apache2
-mywebpackageforredhat: httpd
+mywebpackageforRedHat: httpd
 
 myjavapackonubuntu: openjdk-8-jre
-myjavepackonredhat: java-1.8.0-openjdk
+myjavepackonRedHat: java-1.8.0-openjdk
 
 mywgetpackageforubuntu: wget
-mywgetpackageforredhat: wget
+mywgetpackageforRedHat: wget
