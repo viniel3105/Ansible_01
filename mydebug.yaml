@@ -1,0 +1,6 @@
+---
+- hosts: 172.31.36.4
+  become: yes
+  tasks: 
+  - name: I want to execute Linux command
+    command: java -version
