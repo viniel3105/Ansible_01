@@ -8,3 +8,10 @@
   - name: I want to display my result
     debug:
      msg: "{{myresult}}"
+
+  - name: I want to check os release 
+    command: cat /etc/os-release
+    register: myresult
+  - name: I want to display my result
+    debug:
+     msg: "{{myresult}}"
