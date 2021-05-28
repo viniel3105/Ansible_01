@@ -21,7 +21,5 @@
 [redhatservers]
 172.31.24.27
 
-[mywget:vars]
-mywgetpackageforubuntu= wget
-mywgetpackageforredhat= wget
+
 

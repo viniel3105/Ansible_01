@@ -1,0 +1,9 @@
+
+mywebpackageforubuntu= apache2
+mywebpackageforredhat= httpd
+
+myjavapackforubuntu= openjdk-8-jre
+myjavepackforredhat= java-1.8.0-openjdk
+
+mywgetpackageforubuntu= wget
+mywgetpackageforredhat= wget
