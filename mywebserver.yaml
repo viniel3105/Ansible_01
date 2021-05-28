@@ -10,7 +10,7 @@
   -  name: install webserver on debian node only
      apt: 
         name: "{{mywebpackageforubuntu}}"
-        state: present
+        state: started
      when: ansible_os_family =="Debian"
 
   -  name: install webserver on RedHat node only
@@ -18,9 +18,8 @@
        name: "{{mywebpackageforRedHat}}"
        state: present
      when: ansible_os_family=="RedHat"
-
-  -  name: install webserver on Redhat node only
+  -  name: install webserver on RedHat node only
      yum:
-       name: "{{mywebpackageforredhat}}"
-       state: present
+       name: "{{mywebpackageforRedHat}}"
+       state: started
      when: ansible_os_family=="RedHat"
