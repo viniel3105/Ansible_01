@@ -1,0 +1,19 @@
+---
+- hosts: 172.31.35.76
+  become: yes
+  tasks: 
+  - name: I want install wget on Ubuntu
+    apt:
+      name: wget
+      state: present
+
+  - name: I want to install tree on Ubuntu
+    apt: 
+     name: tree
+     state: present
+    ignore_errors: yes
+    
+  - name: I want to install git on Ubuntu
+    apt:
+       name: git
+       state: present
