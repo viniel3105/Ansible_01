@@ -10,9 +10,9 @@
   - name: I want to install tree on Ubuntu
     apt: 
      name: tree
-     state: present
+     statee: present
     ignore_errors: yes
-    
+
   - name: I want to install git on Ubuntu
     apt:
        name: git
