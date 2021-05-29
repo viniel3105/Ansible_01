@@ -2,11 +2,22 @@
  - hosts: 172.31.35.76
    become: yes
    tasks: 
- - name: I want to execute linux command directly
-   command: hostname
-   register: myresult
- - name: I want to display myresult
-   debug: 
-     msg: "{{myresult}}"
+   - name: I want to execute linux command directly
+     command: hostname
+     register: myresult
+   - name: I want to display myresult
+     debug: 
+       msg: "{{myresult}}"
+   - name: I want to install git
+     apt:
+      name: git
+      state: present
+     when: myresult.stderr = ""
+
+   - name: I want to install tree
+     apt: 
+      name: tree
+      state: present
+     when: myresult.stderr != ""
 
  
