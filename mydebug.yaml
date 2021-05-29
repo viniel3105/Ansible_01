@@ -1,7 +1,7 @@
 ---
- - hosts: 172.31.35.76
-   become: yes
-   tasks: 
+- hosts: 172.31.35.76
+  become: yes
+  tasks: 
    - name: I want to execute linux command directly
      command: hostname
      register: myresult
