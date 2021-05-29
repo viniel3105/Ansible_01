@@ -6,16 +6,16 @@
     yum: 
      name: git
      state: present
-     tags: mygit
+    tags: mygit
      
   - name: I want to install tree on RedHat
     yum:
      name: tree
      state: present
-     tags: mytree
+    tags: mytree
 
   - name: I want to install wget on RedHat
     yum:
      name: wget
      state: present
-     tags: mywget
+    tags: mywget
