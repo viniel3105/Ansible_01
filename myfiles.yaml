@@ -8,13 +8,16 @@
     apt:
       name: apache2
       state: present
-
-  - name: I want to restart webserver on ubuntu node
-    service:
-       name: apache2
-       state: started
-
+    notify: restartwebserver
+    
   - name: I want to copy myindex.j2 file
     template:
        src: myindex.j2
        dest: /var/www/html/index.html    
+    notify: restartwebserver
+
+  handlers:
+  - name: restartwebserver
+    service:
+      name: apache2
+      state: restarted
