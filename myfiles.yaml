@@ -3,8 +3,14 @@
   become: yes
   tasks: 
   - include_tasks: file.yaml
+
   - name: I want to install webserver on ubuntu node
     apt:
       name: apache2
       state: present
 
+  - name: I want to restart webserver on ubuntu node
+    service:
+       name: apache2
+       state: started
+       
