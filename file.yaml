@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: I want to create a test file on node server
+    file:
+      path: /home/viniel/test.txt
+      state: touch

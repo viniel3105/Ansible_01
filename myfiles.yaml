@@ -1,0 +1,11 @@
+---
+- hosts: 172.31.35.76
+  become: yes
+  tasks: 
+  - include_tasks: file.yaml
+    
+  - name: I want to install webserver on ubuntu node
+    apt:
+      name: apache2
+      state: present
+      
