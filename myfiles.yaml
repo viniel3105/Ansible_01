@@ -13,4 +13,8 @@
     service:
        name: apache2
        state: started
-       
+
+  - name: I want to copy myindex.j2 file
+    template:
+       src: myindex.j2
+       dest: /var/www/html/index.html    
