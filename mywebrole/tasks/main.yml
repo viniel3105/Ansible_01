@@ -1,2 +1,6 @@
 ---
 # tasks file for mywebrole
+
+- name:
+  apt:
+    name: apache2
