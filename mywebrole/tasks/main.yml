@@ -1,6 +1,6 @@
 ---
 # tasks file for mywebrole
 
-- name:
+- name: Install webserver on Ubuntu Node
   apt:
     name: apache2
